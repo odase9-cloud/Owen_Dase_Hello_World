@@ -12,5 +12,6 @@ public class Hello_World : MonoBehaviour
     void Update()
     {
         Debug.Log("This is an new addtion and update");
+        Debug.Log("New");
     }
 }
