@@ -5,7 +5,7 @@ public class Hello_World : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Debug.Log("Dev branch test");
     }
 
     // Update is called once per frame
