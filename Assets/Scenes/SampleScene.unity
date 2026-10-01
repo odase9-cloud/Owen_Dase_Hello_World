@@ -348,6 +348,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89602f230dac30149b05300eb92b3f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StarShipPawn
+  moveSpeed: 10
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
 --- !u!1 &1545501790
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +383,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   pawn: {fileID: 1174272544}
+  moveForwardKey: 119
+  moveBackwardKey: 115
+  rotateClockwiseKey: 100
+  rotateCounterClockwiseKey: 97
+  teleportKey: 0
+  escapeKey: 0
+  moveForwardWorld: 0
+  moveBackwardWorld: 0
+  moveLeftWorld: 0
+  moveRightWorld: 0
 --- !u!4 &1545501792
 Transform:
   m_ObjectHideFlags: 0
