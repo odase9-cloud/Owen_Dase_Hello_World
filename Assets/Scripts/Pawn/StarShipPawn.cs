@@ -16,7 +16,14 @@ public class StarShipPawn : Pawn
     }
     public override void Move(Vector3 direction)
     {
-            tf.position = tf.position + direction.normalized * moveSpeed * Time.deltaTime;
+        float currentSpeed = moveSpeed;
+
+        if (Input.GetKey(turbo))
+        {
+            currentSpeed *= 2.0f;
+        }
+
+        tf.position = tf.position + direction.normalized * currentSpeed * Time.deltaTime;
     }
 
     public override void MoveWorldSpace(Vector3 direction)
