@@ -7,6 +7,7 @@ public abstract class Pawn : MonoBehaviour
     public float maxX;
     public float minY;
     public float maxY;
+    public float rotateSpeed; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public abstract void Start();
 
@@ -17,7 +18,7 @@ public abstract class Pawn : MonoBehaviour
 
     public abstract void MoveWorldSpace(Vector3 direction);
 
-    public abstract void Rotate();
+    public abstract void Rotate(float speed);
 
     public abstract void Teleport();
 }

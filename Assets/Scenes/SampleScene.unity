@@ -353,6 +353,8 @@ MonoBehaviour:
   maxX: 0
   minY: 0
   maxY: 0
+  rotateSpeed: 360
+  turbo: 304
 --- !u!1 &1545501790
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,10 +391,10 @@ MonoBehaviour:
   rotateCounterClockwiseKey: 97
   teleportKey: 0
   escapeKey: 0
-  moveForwardWorld: 0
-  moveBackwardWorld: 0
-  moveLeftWorld: 0
-  moveRightWorld: 0
+  moveForwardWorld: 273
+  moveBackwardWorld: 274
+  moveLeftWorld: 276
+  moveRightWorld: 275
 --- !u!4 &1545501792
 Transform:
   m_ObjectHideFlags: 0

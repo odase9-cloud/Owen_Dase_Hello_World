@@ -29,11 +29,11 @@ public class PlayerController : Controller
         }
         if (Input.GetKey(rotateClockwiseKey))
         {
-
+            pawn.Rotate(-pawn.rotateSpeed); 
         }
         if (Input.GetKey(rotateCounterClockwiseKey))
         {
-
+            pawn.Rotate(pawn.rotateSpeed);
         }
         if (Input.GetKeyDown(teleportKey))
         {
