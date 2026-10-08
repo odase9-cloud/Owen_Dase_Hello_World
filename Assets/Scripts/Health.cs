@@ -33,6 +33,10 @@ public class Health : MonoBehaviour
     }
     public void Die()
     {
-
+        Death death = GetComponent<Death>();
+        if (death != null)
+        { 
+          
+        }
     }
 }
