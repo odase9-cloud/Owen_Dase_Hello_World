@@ -3,6 +3,7 @@ using UnityEngine;
 public class astriod : MonoBehaviour
     
 {
+    public float damageAmount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,10 +23,12 @@ public class astriod : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Health health = collision.GetComponent<Health>();
-        if (health != null)
+     Health health = collision.GetComponent<Health>();
+       if (health != null)
         {
-
+          health.TakeDamage(damageAmount);
+            Destroy(gameObject);
         }
+        
     }
 }
