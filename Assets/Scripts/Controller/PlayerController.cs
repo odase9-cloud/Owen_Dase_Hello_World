@@ -13,6 +13,7 @@ public class PlayerController : Controller
     public KeyCode moveBackwardWorld;
     public KeyCode moveLeftWorld;
     public KeyCode moveRightWorld;
+    public KeyCode shootKey; 
     public override void Start()
     {
 
@@ -54,6 +55,10 @@ public class PlayerController : Controller
         if (Input.GetKeyDown(moveLeftWorld))
         {
             pawn.MoveWorldSpace(-Vector3.right);
+        }
+        if (Input.GetKeyDown(shootKey));
+        {
+            pawn.Shoot();
         }
     }
     public override void MakeDecisions()

@@ -40,4 +40,9 @@ public class StarShipPawn : Pawn
     {
         tf.Rotate(0.0f, 0.0f, speed * Time.deltaTime);
     }
+
+    public override void Shoot()
+    {
+        
+    }
 }
