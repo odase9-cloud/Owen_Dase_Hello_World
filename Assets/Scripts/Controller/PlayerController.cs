@@ -56,7 +56,7 @@ public class PlayerController : Controller
         {
             pawn.MoveWorldSpace(-Vector3.right);
         }
-        if (Input.GetKeyDown(shootKey));
+        if (Input.GetKeyDown(shootKey))
         {
             pawn.Shoot();
         }

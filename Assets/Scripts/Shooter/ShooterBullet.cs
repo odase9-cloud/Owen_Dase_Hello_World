@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class ShooterBullet : Shooter
 {
-    public GameObject bulletPrefab;
+    public GameObject BulletPrefab;
     public Transform bulletSpawnPoint;
     public override void Shoot()
     {
-        Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        Instantiate(BulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

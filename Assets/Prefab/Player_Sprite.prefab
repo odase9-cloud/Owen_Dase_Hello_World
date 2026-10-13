@@ -41,13 +41,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1269345537755338997}
   - component: {fileID: 3478332680545815339}
-  - component: {fileID: 2848661712837311304}
-  - component: {fileID: 4187421954431122415}
-  - component: {fileID: 157661275604856109}
-  - component: {fileID: 1779097532833417661}
   - component: {fileID: 3673969091867633243}
-  - component: {fileID: 8095786210319122365}
-  - component: {fileID: 5385876445575083315}
+  - component: {fileID: 1640996167295445244}
+  - component: {fileID: 1930547722717818618}
+  - component: {fileID: 6601899437634179272}
+  - component: {fileID: -8890837113719643387}
+  - component: {fileID: -2226508712653434116}
   m_Layer: 0
   m_Name: Player_Sprite
   m_TagString: Untagged
@@ -130,70 +129,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &2848661712837311304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5232473850129737696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a64c36de21831a4aa3139182c4e3e7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Sprite_Changer
-  theRenderer: {fileID: 0}
---- !u!114 &4187421954431122415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5232473850129737696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d922f81c728c16d45b3cf8d03938ccfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteMover
-  minX: -6
-  maxX: 6
-  minY: -3
-  maxY: 3
-  teleportKey: 116
-  escapeKey: 27
---- !u!114 &157661275604856109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5232473850129737696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89602f230dac30149b05300eb92b3f8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StarShipPawn
-  moveSpeed: 10
-  minX: 0
-  maxX: 0
-  minY: 0
-  maxY: 0
-  rotateSpeed: 360
-  turbo: 304
---- !u!114 &1779097532833417661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5232473850129737696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70f10ecc055a80940ae8f387abff62db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Health
-  currentHealth: 100
-  maxHealth: 100
 --- !u!60 &3673969091867633243
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -262,7 +197,7 @@ PolygonCollider2D:
       - {x: 0.45499998, y: -0.265}
       - {x: 0.47622302, y: -0.24817216}
   m_UseDelaunayMesh: 1
---- !u!114 &8095786210319122365
+--- !u!114 &1640996167295445244
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -271,10 +206,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5232473850129737696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d29f5215f670854479414198e068bce2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a64c36de21831a4aa3139182c4e3e7c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Death_Destory
---- !u!114 &5385876445575083315
+  m_EditorClassIdentifier: Assembly-CSharp::Sprite_Changer
+  theRenderer: {fileID: 0}
+--- !u!114 &1930547722717818618
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -283,6 +219,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 5232473850129737696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff6c120a005e9d64cbc67220b4380115, type: 3}
+  m_Script: {fileID: 11500000, guid: d922f81c728c16d45b3cf8d03938ccfe, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Shooter
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteMover
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
+  teleportKey: 0
+  escapeKey: 0
+--- !u!114 &6601899437634179272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5232473850129737696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f10ecc055a80940ae8f387abff62db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  currentHealth: 100
+  maxHealth: 100
+--- !u!114 &-8890837113719643387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5232473850129737696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89602f230dac30149b05300eb92b3f8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StarShipPawn
+  moveSpeed: 5
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
+  rotateSpeed: 360
+  shooter: {fileID: -2226508712653434116}
+  turbo: 304
+--- !u!114 &-2226508712653434116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5232473850129737696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01fdfeb936278fc44bf34452821eb776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShooterBullet
+  BulletPrefab: {fileID: 1070218332460921047, guid: 9033e744b7613f64b957c9ef4d8aab8c, type: 3}
+  bulletSpawnPoint: {fileID: 0}

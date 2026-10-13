@@ -10,9 +10,9 @@ public abstract class Pawn : MonoBehaviour
     public float rotateSpeed;
     public Shooter shooter; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public virtual void Start();
+    public virtual void Start()
     {
-      shooter = GetComponent<Shooter>();
+      shooter = GetComponent<Shooter>(); 
     }
 
     // Update is called once per frame

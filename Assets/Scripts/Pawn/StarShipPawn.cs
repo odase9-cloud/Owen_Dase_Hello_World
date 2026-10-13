@@ -8,6 +8,7 @@ public class StarShipPawn : Pawn
     public override void Start()
     {
         tf = GetComponent<Transform>(); 
+        base.Start();
     }
 
     public override void Update()
@@ -43,6 +44,6 @@ public class StarShipPawn : Pawn
 
     public override void Shoot()
     {
-        
+        shooter.Shoot();
     }
 }
