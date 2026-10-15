@@ -16,7 +16,11 @@ public class PlayerController : Controller
     public KeyCode shootKey; 
     public override void Start()
     {
-
+        GameManager gm = GameManager.instance;
+        if (gm != null) 
+        {
+            gm.playerController = this;
+        }
     }
     public override void Update()
     {

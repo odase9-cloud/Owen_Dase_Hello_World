@@ -4,7 +4,8 @@ public class Bullet : MonoBehaviour
 {
     public float lifetime;
     public float forceAmount;
-    public Rigidbody2D rb; 
+    public Rigidbody2D rb;
+    public float damageAmount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,4 +22,13 @@ public class Bullet : MonoBehaviour
     {
         
     }
-}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Health health = collision.GetComponent<Health>();
+        if (health != null)
+        {
+            health.TakeDamage(damageAmount);
+            Destroy(gameObject);
+        }
+    }
+    }

@@ -7,7 +7,11 @@ public class astriod : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        GameManager gm = GameManager.instance;
+        if (gm != null)
+        {
+            
+        }
     }
 
     // Update is called once per frame
