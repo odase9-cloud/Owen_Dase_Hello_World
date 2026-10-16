@@ -10,7 +10,10 @@ public class astriod : MonoBehaviour
         GameManager gm = GameManager.instance;
         if (gm != null)
         {
-            
+            if (gm.asteriodList != null)
+            {
+                gm.asteriodList.Add(this);
+            }
         }
     }
 

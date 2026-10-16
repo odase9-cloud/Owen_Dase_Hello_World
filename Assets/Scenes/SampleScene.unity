@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   playerController: {fileID: 0}
+  asteriodList: []
 --- !u!4 &531191854
 Transform:
   m_ObjectHideFlags: 0

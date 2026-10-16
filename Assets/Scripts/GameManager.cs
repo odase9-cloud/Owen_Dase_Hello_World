@@ -1,9 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public PlayerController playerController;
+    public List<astriod> asteriodList;
   
     public void Awake()
     {
@@ -15,6 +17,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        asteriodList= new List<astriod>();
+       
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,5 +33,11 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Failure");
         }
+        asteriodList.RemoveAll(asteroid => asteroid == null);
+        if (asteriodList.Count == 0)
+        {
+            Debug.Log("Victory"); 
+        }
     }
+   
 }
