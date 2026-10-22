@@ -172,4 +172,4 @@ MonoBehaviour:
   lifetime: 3
   forceAmount: 20
   rb: {fileID: -4552945224379445425}
-  damageAmount: 100
+  damageAmount: 50

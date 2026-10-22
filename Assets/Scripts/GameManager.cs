@@ -1,15 +1,22 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public PlayerController playerController;
     public List<astriod> asteriodList;
-  
+    public int score;
+
+    public void AddToScore(int scoreToAdd)
+    {
+      score = score + scoreToAdd;
+    }
+
     public void Awake()
     {
-        if (instance == null) 
+        if (instance == null)
         {
             instance = this;
         }
@@ -17,13 +24,13 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        asteriodList= new List<astriod>();
-       
+        asteriodList = new List<astriod>();
+
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -36,8 +43,10 @@ public class GameManager : MonoBehaviour
         asteriodList.RemoveAll(asteroid => asteroid == null);
         if (asteriodList.Count == 0)
         {
-            Debug.Log("Victory"); 
+            Debug.Log("Victory");
         }
     }
-   
+    
+    
+
 }
