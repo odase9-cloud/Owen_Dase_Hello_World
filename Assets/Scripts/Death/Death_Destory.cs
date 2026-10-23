@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class Death_Destory : Death
 {
+    public int scoreToAdd;
     public override void Die()
     {
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.AddToScore(scoreToAdd);
+        }
         Destroy(gameObject);
     }
 

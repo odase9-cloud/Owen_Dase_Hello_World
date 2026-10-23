@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GameManager : MonoBehaviour
     public PlayerController playerController;
     public List<astriod> asteriodList;
     public int score;
+    public TMP_Text scoreText;
 
     public void AddToScore(int scoreToAdd)
     {
@@ -45,6 +47,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Victory");
         }
+        scoreText.text = " " + score;
     }
     
     

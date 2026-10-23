@@ -345,6 +345,7 @@ MonoBehaviour:
   playerController: {fileID: 0}
   asteriodList: []
   score: 0
+  scoreText: {fileID: 1543417808}
 --- !u!4 &531191854
 Transform:
   m_ObjectHideFlags: 0
@@ -1001,6 +1002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29f5215f670854479414198e068bce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Death_Destory
+  scoreToAdd: 0
 --- !u!1 &1502902259
 GameObject:
   m_ObjectHideFlags: 0

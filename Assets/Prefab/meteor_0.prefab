@@ -205,6 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   currentHealth: 100
   maxHealth: 100
+  healthImage: {fileID: 5572724860531554706}
 --- !u!114 &6592382021637866050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29f5215f670854479414198e068bce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Death_Destory
+  scoreToAdd: 5
 --- !u!114 &1132222123326653418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,10 +400,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 8973336124164743851, guid: db138ce4130a7ab4fb601dcbb15c70b7, type: 3}
-  m_Type: 1
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
