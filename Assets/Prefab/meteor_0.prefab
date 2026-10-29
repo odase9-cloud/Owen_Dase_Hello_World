@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Death_Destory
   scoreToAdd: 5
+  clip1: {fileID: 0}
 --- !u!114 &1132222123326653418
 MonoBehaviour:
   m_ObjectHideFlags: 0

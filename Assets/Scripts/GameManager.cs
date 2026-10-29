@@ -1,7 +1,8 @@
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 using TMPro;
+using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,10 +11,18 @@ public class GameManager : MonoBehaviour
     public List<astriod> asteriodList;
     public int score;
     public TMP_Text scoreText;
+    public AudioSource audioSource;
+
 
     public void AddToScore(int scoreToAdd)
     {
-      score = score + scoreToAdd;
+        if (audioSource != null)
+        {
+
+            audioSource.Play();
+
+        }
+        score = score + scoreToAdd;
     }
 
     public void Awake()
