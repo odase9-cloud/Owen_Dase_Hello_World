@@ -1,29 +1,25 @@
+
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Audio;
-using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+
     public PlayerController playerController;
-    public List<astriod> asteriodList;
+    public List<astriod> asteriodList = new List<astriod>();
+
     public int score;
     public TMP_Text scoreText;
     public AudioSource audioSource;
 
+    public GameObject winPanel;
+    public GameObject losePanel;
 
-    public void AddToScore(int scoreToAdd)
-    {
-        if (audioSource != null)
-        {
-
-            audioSource.Play();
-
-        }
-        score = score + scoreToAdd;
-    }
+    private bool gameEnded;
 
     public void Awake()
     {
@@ -34,31 +30,90 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
+
         asteriodList = new List<astriod>();
-
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
+        gameEnded = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator Start()
     {
-        if (playerController.pawn == null)
-        {
-            Debug.Log("Failure");
-        }
+        if (winPanel != null)
+            winPanel.SetActive(false);
+
+        if (losePanel != null)
+            losePanel.SetActive(false);
+
+        Time.timeScale = 1f;
+
+        yield return null;
+
+        CheckForWin();
+    }
+
+    private void Update()
+    {
+        if (gameEnded)
+            return;
+
         asteriodList.RemoveAll(asteroid => asteroid == null);
-        if (asteriodList.Count == 0)
-        {
-            Debug.Log("Victory");
-        }
-        scoreText.text = " " + score;
-    }
-    
-    
 
+        if (scoreText != null)
+            scoreText.text = " " + score;
+
+        if (playerController != null &&
+            playerController.pawn == null)
+        {
+            EndGame(false);
+            return;
+        }
+
+        CheckForWin();
+    }
+
+    private void CheckForWin()
+    {
+        if (!gameEnded && asteriodList.Count == 0)
+        {
+            EndGame(true);
+        }
+    }
+
+    public void AddToScore(int scoreToAdd)
+    {
+        if (audioSource != null)
+            audioSource.Play();
+
+        score += scoreToAdd;
+    }
+
+    public void EndGame(bool won)
+    {
+        if (gameEnded)
+            return;
+
+        gameEnded = true;
+
+        if (winPanel != null)
+            winPanel.SetActive(won);
+
+        if (losePanel != null)
+            losePanel.SetActive(!won);
+
+        Time.timeScale = 0f;
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(
+            SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
 }
