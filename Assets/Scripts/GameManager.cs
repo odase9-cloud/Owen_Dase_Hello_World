@@ -21,6 +21,10 @@ public class GameManager : MonoBehaviour
 
     private bool gameEnded;
 
+    public bool asteroidSpawningComplete = false;
+
+
+
     public void Awake()
     {
         if (instance == null)
@@ -37,7 +41,7 @@ public class GameManager : MonoBehaviour
         gameEnded = false;
     }
 
-    private IEnumerator Start()
+    private void Start()
     {
         if (winPanel != null)
             winPanel.SetActive(false);
@@ -46,10 +50,6 @@ public class GameManager : MonoBehaviour
             losePanel.SetActive(false);
 
         Time.timeScale = 1f;
-
-        yield return null;
-
-        CheckForWin();
     }
 
     private void Update()
@@ -74,7 +74,12 @@ public class GameManager : MonoBehaviour
 
     private void CheckForWin()
     {
-        if (!gameEnded && asteriodList.Count == 0)
+        if (gameEnded || !asteroidSpawningComplete)
+            return;
+
+        asteriodList.RemoveAll(asteroid => asteroid == null);
+
+        if (asteriodList.Count == 0)
         {
             EndGame(true);
         }
@@ -107,13 +112,17 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(
-            SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ReturnToMainMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void FinishAsteroidSpawning()
+    {
+        asteroidSpawningComplete = true;
     }
 }

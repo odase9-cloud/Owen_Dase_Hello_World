@@ -1,27 +1,27 @@
+
 using UnityEngine;
 
 public class astriod : MonoBehaviour
-    
+
 {
     public float damageAmount;
-   
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
         GameManager gm = GameManager.instance;
-        if (gm != null)
+
+        if (gm != null && gm.asteriodList != null &&
+            !gm.asteriodList.Contains(this))
         {
-            if (gm.asteriodList != null)
-            {
-                gm.asteriodList.Add(this);
-            }
+            gm.asteriodList.Add(this);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -31,12 +31,13 @@ public class astriod : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-     Health health = collision.GetComponent<Health>();
-       if (health != null)
+        Health health = collision.GetComponent<Health>();
+        if (health != null)
         {
-          health.TakeDamage(damageAmount);
+            health.TakeDamage(damageAmount);
             Destroy(gameObject);
         }
-        
+
     }
 }
+

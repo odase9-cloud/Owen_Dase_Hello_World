@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 3487814335014551926}
   - component: {fileID: 8265401781697047652}
   - component: {fileID: 7684626153470377878}
-  - component: {fileID: 6592382021637866050}
   - component: {fileID: 1132222123326653418}
+  - component: {fileID: 8141720629079124978}
+  - component: {fileID: 8519857027704825961}
   m_Layer: 0
   m_Name: meteor_0
   m_TagString: Untagged
@@ -206,20 +207,6 @@ MonoBehaviour:
   currentHealth: 100
   maxHealth: 100
   healthImage: {fileID: 5572724860531554706}
---- !u!114 &6592382021637866050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2255869007508987787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d29f5215f670854479414198e068bce2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Death_Destory
-  scoreToAdd: 5
-  clip1: {fileID: 0}
 --- !u!114 &1132222123326653418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +219,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71600071deea28c45ab2b4087fa84ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::astriod
-  damageAmount: 25
+  damageAmount: 1
+  minimumSplitScale: 1
+  splitCount: 2
+  splitForce: 2
+--- !u!114 &8141720629079124978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255869007508987787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec71812bd8fa56d41adb5a490019f2d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScreenWrap
+  padding: 0.3
+--- !u!114 &8519857027704825961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255869007508987787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29f5215f670854479414198e068bce2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Death_Destory
+  scoreToAdd: 5
 --- !u!1 &3817130635286699144
 GameObject:
   m_ObjectHideFlags: 0
