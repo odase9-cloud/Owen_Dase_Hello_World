@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7684626153470377878}
   - component: {fileID: 1132222123326653418}
   - component: {fileID: 8141720629079124978}
-  - component: {fileID: 8519857027704825961}
+  - component: {fileID: -1888571079187656887}
   m_Layer: 0
   m_Name: meteor_0
   m_TagString: Untagged
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScreenWrap
   padding: 0.3
---- !u!114 &8519857027704825961
+--- !u!114 &-1888571079187656887
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,10 +243,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2255869007508987787}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d29f5215f670854479414198e068bce2, type: 3}
+  m_Script: {fileID: 11500000, guid: 22f1dfe4cf3405440a4bbde5925cc1cd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Death_Destory
+  m_EditorClassIdentifier: Assembly-CSharp::SplittingDeath
+  childAsteroidPrefab: {fileID: 2255869007508987787}
+  childrenToSpawn: 2
+  childScaleMultiplier: 0.5
+  splitForce: 2
+  minimumSplitScale: 0.3
+  maxSplitDepth: 2
+  spawnGap: 0.5
   scoreToAdd: 5
+  splitDepth: 0
 --- !u!1 &3817130635286699144
 GameObject:
   m_ObjectHideFlags: 0

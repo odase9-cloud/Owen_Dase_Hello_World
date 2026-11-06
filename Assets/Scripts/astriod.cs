@@ -24,18 +24,19 @@ public class astriod : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("collided with" + collision.gameObject.name);
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.GetComponent<astriod>() != null)
+            return;
+
         Health health = collision.GetComponent<Health>();
+
         if (health != null)
         {
-            health.TakeDamage(damageAmount);        }
-
+            health.TakeDamage(damageAmount);
+        }
     }
+
 }
 

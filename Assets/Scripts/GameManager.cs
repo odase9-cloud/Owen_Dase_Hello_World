@@ -85,6 +85,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+    public void RegisterAsteroid(astriod asteroid)
+    {
+        if (asteroid == null)
+            return;
+
+        if (asteriodList == null)
+            asteriodList = new List<astriod>();
+
+        if (!asteriodList.Contains(asteroid))
+        {
+            asteriodList.Add(asteroid);
+        }
+    }
+
     public void AddToScore(int scoreToAdd)
     {
         if (audioSource != null)

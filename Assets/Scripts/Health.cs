@@ -12,14 +12,38 @@ public class Health : MonoBehaviour
     public int scoreToAdd;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-        if (healthImage != null)
+        if (healthImage == null)
         {
-            healthImage.fillAmount = currentHealth / maxHealth;
+            Canvas canvas = GetComponentInChildren<Canvas>(true);
+
+            if (canvas != null)
+            {
+                healthImage = canvas.GetComponentInChildren<Image>(true);
+            }
         }
 
+        if (healthImage != null)
+        {
+            healthImage.enabled = true;
+            healthImage.gameObject.SetActive(true);
+
+            if (maxHealth > 0)
+            {
+                healthImage.fillAmount = currentHealth / maxHealth;
+            }
+        }
+        else
+        {
+            Debug.LogWarning(
+                gameObject.name + " has no health bar Image assigned!",
+                gameObject
+            );
+        }
     }
+
 
     // Update is called once per frame
     void Update()
