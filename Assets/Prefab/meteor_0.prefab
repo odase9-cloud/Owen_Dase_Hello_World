@@ -207,6 +207,7 @@ MonoBehaviour:
   currentHealth: 100
   maxHealth: 100
   healthImage: {fileID: 5572724860531554706}
+  scoreToAdd: 0
 --- !u!114 &1132222123326653418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,9 +221,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::astriod
   damageAmount: 1
-  minimumSplitScale: 1
-  splitCount: 2
-  splitForce: 2
 --- !u!114 &8141720629079124978
 MonoBehaviour:
   m_ObjectHideFlags: 0

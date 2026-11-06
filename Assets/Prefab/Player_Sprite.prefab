@@ -245,6 +245,7 @@ MonoBehaviour:
   currentHealth: 5
   maxHealth: 5
   healthImage: {fileID: 5023149439535893891}
+  scoreToAdd: -10
 --- !u!114 &-8890837113719643387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +266,7 @@ MonoBehaviour:
   rotateSpeed: 360
   shooter: {fileID: -2226508712653434116}
   turbo: 304
+  damageAmount: 100
 --- !u!114 &-2226508712653434116
 MonoBehaviour:
   m_ObjectHideFlags: 0

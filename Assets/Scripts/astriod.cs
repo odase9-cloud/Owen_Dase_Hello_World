@@ -34,9 +34,7 @@ public class astriod : MonoBehaviour
         Health health = collision.GetComponent<Health>();
         if (health != null)
         {
-            health.TakeDamage(damageAmount);
-            Destroy(gameObject);
-        }
+            health.TakeDamage(damageAmount);        }
 
     }
 }

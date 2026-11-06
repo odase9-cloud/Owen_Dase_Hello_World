@@ -4,6 +4,7 @@ public class StarShipPawn : Pawn
 {
     private Transform tf;
     public KeyCode turbo;
+    public float damageAmount;
 
     public override void Start()
     {
@@ -45,5 +46,14 @@ public class StarShipPawn : Pawn
     public override void Shoot()
     {
         shooter.Shoot();
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Health health = collision.GetComponent<Health>();
+        if (health != null)
+        {
+            health.TakeDamage(damageAmount);
+        }
+
     }
 }

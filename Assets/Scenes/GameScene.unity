@@ -4146,6 +4146,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8890837113719643387, guid: 92783a6611de339448b897bc5cc5666d, type: 3}
+      propertyPath: damageAmount
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: -2226508712653434116, guid: 92783a6611de339448b897bc5cc5666d, type: 3}
       propertyPath: audioSource
       value: 
