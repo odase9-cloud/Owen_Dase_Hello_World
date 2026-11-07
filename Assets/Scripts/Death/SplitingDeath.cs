@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SplittingDeath : Death
 {
@@ -71,7 +72,34 @@ public class SplittingDeath : Death
                 Quaternion.identity
             );
 
+
             Canvas healthCanvas = child.GetComponentInChildren<Canvas>(true);
+
+            if (healthCanvas != null)
+            {
+                healthCanvas.enabled = true;
+                healthCanvas.gameObject.SetActive(true);
+                healthCanvas.overrideSorting = true;
+                healthCanvas.sortingOrder = 100;
+
+                Image healthImage = healthCanvas.GetComponentInChildren<Image>(true);
+
+                if (healthImage != null)
+                {
+                    healthImage.enabled = true;
+                    healthImage.gameObject.SetActive(true);
+                    healthImage.color = Color.white;
+                    healthImage.fillAmount = 1f;
+                }
+                else
+                {
+                    Debug.LogError("Child asteroid Canvas has no Image!");
+                }
+            }
+            else
+            {
+                Debug.LogError("Child asteroid has no Canvas!");
+            }
 
             Vector3 originalCanvasScale = Vector3.one;
 
