@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ScreenWrap : MonoBehaviour
 {
-    public float padding = 0.2f;
+   
 
     private Camera mainCamera;
 
